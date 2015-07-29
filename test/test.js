@@ -8,7 +8,7 @@ it('should throw if no callback', function() {
 
 it('should get the first commit', function(done) {
   gitTails(function(err, data) {
-    assert.deepEqual(data, ['']);
+    assert.deepEqual(data, ['9594829e694c5284ab6ef3816ded02ca104fee59']);
     done();
   });
 });
