@@ -1,0 +1,46 @@
+{
+  "name": "git-tails",
+  "version": "0.0.0",
+  "description": "Get git tail hashes from your repository in reverse chronological order",
+  "homepage": "https://github.com/stevemao/git-tails",
+  "author": {
+    "name": "Steve Mao",
+    "email": "maochenyan@gmail.com",
+    "url": "https://github.com/stevemao"
+  },
+  "repository": "stevemao/git-tails",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "git-tails",
+    "git",
+    "tail",
+    "head",
+    "tails",
+    "hash",
+    "first",
+    "first-commit",
+    "first-commits"
+  ],
+  "dependencies": {
+    "meow": "^3.1.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.8",
+    "jscs": "^1.11.3",
+    "jshint": "^2.6.3",
+    "mocha": "*"
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha -- -R spec && rm -rf ./coverage",
+    "lint": "jshint *.js test --exclude node_modules && jscs *.js test",
+    "test": "npm run-script lint && mocha"
+  },
+  "bin": {
+    "git-tails": "cli.js"
+  }
+}
