@@ -30,12 +30,21 @@ $ git-tails
 ```
 
 To get the earliest tail you just need to do
+
 ```js
 gitTails(function(err, data) {
   console.log(data[data.length - 1]);
   //=> '0cd33254f2df29272323dca4f052be70d9659174'
 });
 ```
+
+If you know there is only one tails you could do
+
+```sh
+$ git show `git-tails`
+```
+
+Just like `git show HEAD`.
 
 
 ## License
