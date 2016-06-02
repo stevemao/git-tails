@@ -1,6 +1,6 @@
 {
   "name": "git-tails",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get git tail hashes from your repository in reverse chronological order",
   "homepage": "https://github.com/stevemao/git-tails",
   "author": {
