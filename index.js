@@ -8,7 +8,9 @@ module.exports = function(cb) {
     throw new TypeError('Expected a callback');
   }
 
-  exec(cmd, function(err, data) {
+  exec(cmd, {
+    maxBuffer: Infinity
+  }, function(err, data) {
     if (err) {
       cb(err);
       return;
