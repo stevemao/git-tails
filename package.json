@@ -33,10 +33,11 @@
     "istanbul": "^0.3.17",
     "jscs": "^2.0.0",
     "jshint": "^2.8.0",
-    "mocha": "*"
+    "mocha": "*",
+    "mock-git": "^1.0.2"
   },
   "scripts": {
-    "coverage": "istanbul cover _mocha -- -R spec && rm -rf ./coverage",
+    "coverage": "istanbul cover _mocha -- -R spec",
     "lint": "jshint *.js test --exclude node_modules && jscs *.js test",
     "test": "npm run-script lint && mocha"
   },
