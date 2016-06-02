@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.3",
-    "istanbul": "^0.3.17",
-    "jscs": "^2.0.0",
+    "istanbul": "^0.4.3",
+    "jscs": "^3.0.3",
     "jshint": "^2.8.0",
     "mocha": "*",
     "mock-git": "^1.0.2"
