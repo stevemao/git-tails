@@ -1,7 +1,7 @@
 'use strict';
 var exec = require('child_process').exec;
 
-var cmd = 'git rev-list --parents HEAD | egrep "^[a-f0-9]{40}$"';
+var cmd = 'git rev-list --parents HEAD';
 
 module.exports = function(cb) {
   if (typeof cb !== 'function') {
@@ -14,7 +14,7 @@ module.exports = function(cb) {
       return;
     }
 
-    var tails = data.trim().split('\n');
+    var tails = data.match(/^[a-f0-9]{40}$/gm);
 
     cb(null, tails);
   });
