@@ -2,7 +2,9 @@
 
 > Get git tail hashes from your repository in reverse chronological order
 
-Because you want to do something similar to `git show HEAD` and you find out that there is no `git show TAIL`. Reason being there might be more than one tails in your git repository.
+It sucks when you could do `git show HEAD` but not `git show TAIL`. `git-tails` comes to the rescue!
+
+Did you know that there could be more than one tails in your git repository?
 
 
 ## Install
