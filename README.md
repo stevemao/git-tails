@@ -23,6 +23,9 @@ gitTails(function(err, data) {
   console.log(data);
   //=> ['0cd33254f2df29272323dca4f052be70d9659174']
 });
+
+gitTails.sync()
+//=> ['0cd33254f2df29272323dca4f052be70d9659174']
 ```
 
 ```sh

@@ -1,5 +1,5 @@
 'use strict';
-var exec = require('child_process').exec;
+var childProcess = require('child_process');
 
 var cmd = 'git rev-list --parents HEAD';
 
@@ -8,7 +8,7 @@ module.exports = function(cb) {
     throw new TypeError('Expected a callback');
   }
 
-  exec(cmd, {
+  childProcess.exec(cmd, {
     maxBuffer: Infinity
   }, function(err, data) {
     if (err) {
@@ -20,4 +20,10 @@ module.exports = function(cb) {
 
     cb(null, tails);
   });
+};
+
+module.exports.sync = function() {
+  var data = childProcess.execSync(cmd);
+
+  return data.toString().match(/^[a-f0-9]{40}$/gm);
 };

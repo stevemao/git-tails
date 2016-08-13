@@ -2,7 +2,11 @@
 var assert = require('assert');
 var gitTails = require('../');
 var mockGit = require('mock-git');
-var unmock;
+var unmock = function() {};
+
+afterEach(function() {
+  unmock();
+});
 
 it('should throw if no callback', function() {
   assert.throws(gitTails);
@@ -21,9 +25,13 @@ it('should callback with error', function(done) {
 });
 
 it('should get the first commit', function(done) {
-  unmock();
   gitTails(function(err, data) {
     assert.deepEqual(data, ['9594829e694c5284ab6ef3816ded02ca104fee59']);
     done();
   });
+});
+
+it('sync', function(done) {
+  assert.deepEqual(gitTails.sync(), ['9594829e694c5284ab6ef3816ded02ca104fee59']);
+  done();
 });
